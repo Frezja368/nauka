@@ -17,7 +17,6 @@ def checkio(number: int) -> str:
         return string
     else:
         return str(number)
-    # replace this for solution
  
 
 # Some hints:

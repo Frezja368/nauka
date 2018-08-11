@@ -1,6 +1,4 @@
 def between_markers(text: str, begin: str, end: str) -> str:
-   import re
-   
    if begin in text:
        begin_index = text.find(begin) + len(begin)
    else:
