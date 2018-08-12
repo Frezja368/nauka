@@ -2,8 +2,8 @@ from typing import List, Any
 
 
 def all_the_same(elements: List[Any]) -> bool:
-    # your code here
-    return True
+    return all(x== elements[0] for x in elements)
+
 
 
 if __name__ == '__main__':
