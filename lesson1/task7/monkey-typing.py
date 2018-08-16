@@ -1,6 +1,12 @@
 def count_words(text: str, words: set) -> int:
-    return 0
-
+    text = text.lower()
+    words= list(words)
+    counter = 0
+    for elem in words:
+        x = len(text.split(elem))-1
+        if x > 0:
+            counter += 1
+    return counter
 
 if __name__ == '__main__':
     #These "asserts" using only for self-checking and not necessary for auto-testing

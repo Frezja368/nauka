@@ -1,22 +1,19 @@
 def checkio(text: str) -> str:
  
-    text = text.lower()
-    dict_with_letters = {}
-    for letter in text:    
+      text = text.lower()
+    dict_with_lett = {}
+    for letter in text:
         if letter.isalpha():
             counting =text.count(letter)
-            dict_with_letters[letter]= counting
-            sorted_dict= sorted(dict_with_letters.items(), key =lambda x: x[0])
-            sorted_list = sorted(sorted_dict, key = lambda x: (-x[1], x[0]))
-            the_greatest_value= sorted_list[0]
-            only_letter = (the_greatest_value[:1])
-            final_variable = str(only_letter)[2 :-2]
-            x = final_variable.replace("'", "").replace('"', '')
-            print ("finalna?", x)
-    return x
+            dict_with_lett[letter]= counting
 
-    #replace this for solution
-    
+    sorted_dict= sorted(dict_with_lett.items(), key =lambda x: x[0])
+    sorted_l = sorted(sorted_dict, key = lambda x: (-x[1], x[0]))
+    first_tuple = [elem[0] for elem in sorted_l]
+    return first_tuple[0]
+
+
+
 
 if __name__ == '__main__':
     print("Example:")
